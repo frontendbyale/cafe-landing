@@ -1,0 +1,113 @@
+---
+---
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="/" class="logo">Café Aroma</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">Sobre nosotros</a></li>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Ejecuta después de cargar el DOM
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    // Cierra el menú al hacer clic en un enlace (solo en móviles)
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+  });
+</script>
+
+<style>
+.navbar {
+  background-color: white;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  position: static;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 1rem;
+    background-color: white;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+</style>

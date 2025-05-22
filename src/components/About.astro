@@ -1,0 +1,73 @@
+---
+---
+<section class="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>Sobre nosotros</h2>
+      <p>En <strong>Café Aroma</strong> creemos que una buena taza de café puede cambiar tu día. Somos una cafetería de barrio con espíritu artesanal. Cada grano es seleccionado a mano, tostado localmente y preparado con dedicación.</p>
+      <p>Te esperamos con un ambiente cálido, buena música y atención personalizada.</p>
+    </div>
+    <div class="about-image">
+      <img src="/images/about-coffee.jpg" alt="Barista preparando café" />
+    </div>
+  </div>
+</section>
+
+<style>
+.about {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.about-text {
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-text {
+    text-align: left;
+  }
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b86b3c;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+</style>

@@ -1,0 +1,80 @@
+---
+const testimonios = [
+  {
+    nombre: "Lucía Fernández",
+    texto: "¡El café más rico que probé en mucho tiempo! El ambiente es súper cálido y el personal muy amable.",
+    imagen: "/images/lucia.jpg"
+  },
+  {
+    nombre: "Martín Pérez",
+    texto: "Un lugar perfecto para relajarme y trabajar. Recomiendo el latte y las medialunas, son increíbles.",
+    imagen: "/images/martin.jpg"
+  }
+]
+---
+<section class="testimonials">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="testimonials-grid">
+    {testimonios.map(t => (
+      <div class="testimonial">
+        <img src={t.imagen} alt={`Foto de ${t.nombre}`} />
+        <blockquote>"{t.texto}"</blockquote>
+        <p class="nombre">- {t.nombre}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+.testimonials {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #b86b3c;
+  margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial {
+  background-color: #f8f5f2;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  color: #555;
+}
+
+.nombre {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+</style>

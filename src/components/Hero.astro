@@ -1,0 +1,81 @@
+---
+---
+<section class="hero">
+  <div class="hero-content">
+    <div class="text-content">
+      <h1>Bienvenido a <span>Café Aroma</span></h1>
+      <p>Un rincón cálido donde cada taza cuenta una historia. Vení a disfrutar del mejor café artesanal de la ciudad.</p>
+      <a href="#contacto" class="cta-button">Reservá tu mesa</a>
+    </div>
+    <div class="image-content">
+      <img src="/images/coffee-cup.jpg" alt="Taza de café" />
+    </div>
+  </div>
+</section>
+
+<style>
+.hero {
+  padding: 4rem 2rem;
+  background-color: #fdfaf6;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 4rem;
+  }
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-content h1 span {
+  color: #b86b3c;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.cta-button {
+  background-color: #b86b3c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #99522b;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+</style>
