@@ -47,27 +47,21 @@ Luego accedé a `http://localhost:4321` en tu navegador.
 ```
 📁 src/
 ├── components/
+|   └── About.astro
+|   └── Contact.astro
+|   └── Hero.astro
+|   └── Menu.astro
 │   └── Navbar.astro
-├── pages/
-│   └── index.astro
-└── styles/
-    └── global.css
+|   └── Testimonials.astro
+├── layouts/
+|   └── Layouts.astro
+└── pages/
+    └── index.astro
+
 ```
-
----
-
-## 📸 Capturas
-
-> Agregá una imagen llamada `screenshot.png` en la raíz del proyecto para mostrar una preview de la landing en este archivo.
-
----
-
-## 📄 Licencia
-
-Este proyecto es de código abierto bajo licencia MIT. Podés usarlo, modificarlo y adaptarlo libremente.
 
 ---
 
 ## 🙋‍♂️ Autor
 
-Desarrollado por [Tu Nombre](https://github.com/tuusuario) — Freelancer frontend 🇦🇷
+Desarrollado por [Alejandro Perez Ayala](https://github.com/frontendbyale) — Freelancer frontend 🇦🇷
